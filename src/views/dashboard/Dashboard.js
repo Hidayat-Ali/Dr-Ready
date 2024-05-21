@@ -43,14 +43,15 @@ import avatar5 from 'src/assets/images/avatars/5.jpg'
 import avatar6 from 'src/assets/images/avatars/6.jpg'
 import AppSidebar from '../../components/AppSidebar'
 import MainChart from './MainChart'
+import AppHeader from '../../components/AppHeader'
 
 const Dashboard = () => {
   const progressExample = [
-    { title: 'Visits', value: '29.703 Users', percent: 40, color: 'success' },
-    { title: 'Unique', value: '24.093 Users', percent: 20, color: 'info' },
-    { title: 'Pageviews', value: '78.706 Views', percent: 60, color: 'warning' },
-    { title: 'New Users', value: '22.123 Users', percent: 80, color: 'danger' },
-    { title: 'Bounce Rate', value: 'Average Rate', percent: 40.15, color: 'primary' },
+    { title: 'Hospital Visits', value: '29.703 ', percent: 40, color: 'success' },
+    { title: 'Cardio Patients', value: '24.093', percent: 20, color: 'info' },
+    { title: 'Cancer Patients', value: '78.706', percent: 60, color: 'warning' },
+    { title: 'New Patients', value: '22.123', percent: 80, color: 'danger' },
+    { title: 'Bounce Rate', value: 'Average', percent: 40.15, color: 'primary' },
   ]
 
   const progressGroupExample1 = [
@@ -169,17 +170,20 @@ const Dashboard = () => {
   return (
     <>
       <AppSidebar />
+      <div className="wrapper d-flex flex-column ">
+        <AppHeader />
+      </div>
       <CCard className="mb-4 full-dashboard-card">
         <CCardBody>
           <CRow>
             <CCol sm={5}>
               <h4 id="traffic" className="card-title mb-0">
-                Traffic
+                Patients
               </h4>
               <div className="small text-body-secondary">January - July 2023</div>
             </CCol>
             <CCol sm={7} className="d-none d-md-block">
-              <CButton color="primary" className="float-end">
+              <CButton style={{ backgroundColor: '#D76F30' }} className="float-end">
                 <CIcon icon={cilCloudDownload} />
               </CButton>
               <CButtonGroup className="float-end me-3">
@@ -223,25 +227,24 @@ const Dashboard = () => {
           </CRow>
         </CCardFooter>
       </CCard>
-
       <CRow>
         <CCol xs>
           <CCard className="mb-4 full-dashboard-card">
-            <CCardHeader>Traffic {' & '} Sales</CCardHeader>
+            <CCardHeader>Treatment {' & '} Patients</CCardHeader>
             <CCardBody>
               <CRow>
                 <CCol xs={12} md={6} xl={6}>
                   <CRow>
                     <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-info py-1 px-3">
-                        <div className="text-body-secondary text-truncate small">New Clients</div>
+                        <div className="text-body-secondary text-truncate small">New Customers</div>
                         <div className="fs-5 fw-semibold">9,123</div>
                       </div>
                     </CCol>
                     <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
                         <div className="text-body-secondary text-truncate small">
-                          Recurring Clients
+                          Under Treatment
                         </div>
                         <div className="fs-5 fw-semibold">22,643</div>
                       </div>
@@ -264,13 +267,15 @@ const Dashboard = () => {
                   <CRow>
                     <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
-                        <div className="text-body-secondary text-truncate small">Pageviews</div>
+                        <div className="text-body-secondary text-truncate small">
+                          Hospital Views
+                        </div>
                         <div className="fs-5 fw-semibold">78,623</div>
                       </div>
                     </CCol>
                     <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
-                        <div className="text-body-secondary text-truncate small">Organic</div>
+                        <div className="text-body-secondary text-truncate small">Discharged</div>
                         <div className="fs-5 fw-semibold">49,123</div>
                       </div>
                     </CCol>
