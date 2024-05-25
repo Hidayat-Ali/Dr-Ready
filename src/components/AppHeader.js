@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+
 import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import {
@@ -14,6 +15,7 @@ import {
   CNavItem,
   useColorModes,
   CBadge,
+  CButton,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import {
@@ -51,20 +53,13 @@ const AppHeader = () => {
         </CHeaderToggler>
 
         <CHeaderNav className="ms-auto">
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilBell} size="lg" />
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilList} size="lg" />
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilEnvelopeOpen} size="lg" />
-            </CNavLink>
+          <CNavItem className="position-relative">
+            <CButton style={{ background: 'transparent' }}>
+              <CIcon icon={cilBell} size="xl" />
+              <CBadge className="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger">
+                90
+              </CBadge>
+            </CButton>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav>

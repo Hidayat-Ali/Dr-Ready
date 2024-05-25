@@ -22,17 +22,17 @@ const _nav = [
     to: '/dashboard',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
-      color: 'info',
+      color: 'success',
       text: 'NEW',
     },
   },
   {
     component: CNavItem,
-    name: 'available Doctors',
-    to: '/doctors',
+    name: 'Available Doctors',
+    to: 'available-doctors',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
-      color: 'info',
+      color: 'success',
       text: 'NEW',
     },
   },
