@@ -27,8 +27,8 @@ const Appointment = () => {
       _props: { scope: 'col' },
     },
     {
-      key: 'Action',
-      label: 'Action',
+      key: 'Note',
+      label: 'Note',
       _props: { scope: 'col' },
     },
   ]
@@ -38,7 +38,8 @@ const Appointment = () => {
       patient: 'Mark',
       Doctor: 'Otto',
       Department: '@mdo',
-      Action: 'update',
+      Status: 'update',
+      Note: 'Get you all previous patient records',
       _cellProps: { id: { scope: 'row' } },
     },
     {
@@ -46,8 +47,8 @@ const Appointment = () => {
       patient: 'Mark',
       Doctor: 'Otto',
       Department: '@mdo',
-      Action: 'update',
-
+      Status: 'update',
+      Note: 'Get you all previous patient records',
       _cellProps: { id: { scope: 'row' } },
     },
     {
@@ -55,7 +56,8 @@ const Appointment = () => {
       patient: 'Mark',
       Doctor: 'Otto',
       Department: '@mdo',
-      Action: 'update',
+      Status: 'update',
+      Note: 'Get you all previous patient records',
       _cellProps: { id: { scope: 'row' }, class: { colSpan: 2 } },
     },
   ]

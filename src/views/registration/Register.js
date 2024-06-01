@@ -27,9 +27,8 @@ const Register = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault()
-    // Handle login logic here
   }
 
   return (
@@ -39,7 +38,7 @@ const Register = () => {
       initial="hidden"
       animate="visible"
     >
-      <motion.form className="login-form" variants={formVariants} onSubmit={handleLogin}>
+      <motion.form className="login-form" variants={formVariants} onSubmit={handleRegister}>
         <div
           style={{
             alignItems: 'center',
@@ -55,6 +54,7 @@ const Register = () => {
         <input
           type="text"
           id="username"
+          placeholder="Enter Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
@@ -62,6 +62,7 @@ const Register = () => {
         <input
           type="password"
           id="password"
+          placeholder="Enter password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -69,6 +70,7 @@ const Register = () => {
         <input
           type="password"
           id="password"
+          placeholder="Enter password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

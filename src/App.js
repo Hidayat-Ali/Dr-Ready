@@ -7,6 +7,7 @@ import './scss/style.scss'
 import ApplyDoctor from './components/ApplyDoctor'
 import AvailableDoctor from './components/AvailableDoctor.js'
 import Appointment from './components/Appointment.js'
+import Video from './components/Video.js'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const HomeDashboard = React.lazy(() => import('./views/dashboard/HomeDashboard.js'))
@@ -48,6 +49,7 @@ const App = () => {
               <Route path="apply-for-doctor" element={<ApplyDoctor />} />
               <Route path="available-doctors" element={<AvailableDoctor />} />
               <Route path="appointments" element={<Appointment />} />
+              <Route path="video-call" element={<Video />} />
             </Route>
             <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />

@@ -7,3 +7,22 @@
 .card {
   background-color: #6bb77b;
 }
+
+.sidebar-nav .nav-link.active {
+  background-color: #6bb77b;
+}
+.sidebar-nav .nav-link:hover {
+  background-color: #6bb77b;
+}
+.table > :not(caption) > * > * {
+  background-color: transparent;
+}
+.img-thumbnail {
+  background-color: white;
+}
+.dropdown-menu {
+  background-color: #6bb77b;
+}
+.dropdown-item:hover {
+  background-color: chocolate;
+}
